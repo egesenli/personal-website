@@ -12,11 +12,22 @@ module.exports = {
     './lib/**/*.js',
     './data/**/*.mdx',
   ],
+  options: {
+    safelist: ['backdrop-filter', /^bg-opacity/, /^backdrop-blur/],
+  },
   darkMode: 'class',
   theme: {
     extend: {
       spacing: {
         '9/16': '56.25%',
+      },
+      backdropFilter: {
+        none: 'none',
+        blur: 'blur(20px)',
+      },
+      backdropBlur: {
+        none: 'none',
+        md: 'blur(12px)',
       },
       lineHeight: {
         11: '2.75rem',
@@ -162,6 +173,12 @@ module.exports = {
           },
         },
       }),
+    },
+  },
+  variants: {
+    extend: {
+      backdropFilter: ['responsive'],
+      backdropBlur: ['responsive'],
     },
   },
   plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
