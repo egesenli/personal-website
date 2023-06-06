@@ -13,10 +13,14 @@ const ThemeSwitch = () => {
     setTheme(checked ? 'dark' : 'light')
   }
 
+  // Determine initial mode based on default dark mode
+  const isDarkMode =
+    (theme === 'dark' || resolvedTheme === 'dark') && (mounted || theme === undefined)
+
   return (
     <DarkModeSwitch
       onChange={toggleDarkMode}
-      checked={theme === 'dark' || resolvedTheme === 'dark'}
+      checked={isDarkMode}
       animationProperties={{
         dark: {
           circle: {
