@@ -44,7 +44,7 @@ const Navbar = ({ onToggleNav }) => {
             type="button"
             className="ml-1 mr-1 h-8 w-8 rounded py-1 md:hidden"
             aria-label="Toggle Menu"
-            onClick={onToggleNav} // Add this line to trigger the MobileNav menu
+            onClick={onToggleNav}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
