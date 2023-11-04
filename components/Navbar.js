@@ -12,7 +12,7 @@ const Navbar = ({ onToggleNav }) => {
   const { theme, resolvedTheme } = useTheme()
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-gray-200 dark:border-gray-700 backdrop-filter backdrop-blur-lg">
+    <nav className="bg-white/30 dark:bg-black/30 sticky top-0 z-50 border-b border-gray-200 dark:border-gray-700 backdrop-blur">
       <div className="flex items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
         <div className="flex items-center ml-4 mt-2">
           <Link href="/" aria-label={siteMetadata.headerTitle}>
@@ -33,7 +33,7 @@ const Navbar = ({ onToggleNav }) => {
             <Link
               key={link.title}
               href={link.href}
-              className="p-1 font-medium text-black dark:text-gray-100 sm:p-4"
+              className="p-1 font-medium text-black dark:text-gray-100 sm:p-4 hover:bg-gray-200 dark:hover:bg-gray-800 rounded-xl"
             >
               {link.title}
             </Link>
