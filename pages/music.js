@@ -82,8 +82,8 @@ export default function Music() {
                 />
               </svg>
               <div className="sm:maxw-[90%] inline-flex max-w-[70%] items-center space-x-2 text-sm sm:text-base">
-                <p className="font-medium dark:text-gray-200">Not Playing</p>
-                <p className="text-500 dark:text-gray-300"> - Spotify</p>
+                <p className="font-medium text-gray-200">Not Playing</p>
+                <p className="text-500 text-gray-300"> - Spotify</p>
               </div>
             </div>
           </div>
