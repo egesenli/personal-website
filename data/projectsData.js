@@ -1,19 +1,41 @@
 const projectsData = [
   {
-    title: 'A Search Engine',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-    imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
+    title: 'Summary Guru',
+    description: `A single-page app that focuses on providing users with summaries of various types of content, such as articles, books, or movies.`,
+    imgSrc: '',
+    href: 'https://summary-guru.vercel.app/',
+    github: 'https://github.com/egesenli/summary-guru',
+    tech1: 'Next.js',
+    tech2: 'Prisma',
+    tech3: 'PostgreSQL',
+    tech4: 'Tailwind CSS',
   },
   {
-    title: 'The Time Machine',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: '/static/images/time-machine.jpg',
-    href: '/blog/the-time-machine',
+    title: 'Interview Scheduler',
+    description: `A single-page app that allows you to schedule, edit, and delete appointments.`,
+    imgSrc: '',
+    href: '',
+    github: 'https://github.com/egesenli/scheduler',
+    tech1: 'React',
+    tech2: 'Node.js',
+    tech3: 'PostgreSQL',
+    tech4: 'WebSocket',
+    tech5: 'Cypress',
+    tech6: 'Jest',
+    tech7: 'Storybook',
+  },
+  {
+    title: 'Smart To-Do',
+    description: `A smart, auto-categorizing to-do list app. The user simply has to add the name of the task, and it gets put into the correct list.`,
+    imgSrc: '',
+    href: '',
+    github: 'https://github.com/egesenli/smart-todo',
+    tech1: 'jQuery',
+    tech2: 'EJS',
+    tech3: 'Sass',
+    tech4: 'Node.js',
+    tech5: 'Express',
+    tech6: 'PostgreSQL',
   },
 ]
 
