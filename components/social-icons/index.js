@@ -1,19 +1,21 @@
-import Mail from './mail.svg'
-import Github from './github.svg'
-import Facebook from './facebook.svg'
-import Youtube from './youtube.svg'
-import Linkedin from './linkedin.svg'
-import Twitter from './twitter.svg'
+import { AiOutlineMail } from 'react-icons/ai'
+import { AiOutlineGithub } from 'react-icons/ai'
+import { AiOutlineFacebook } from 'react-icons/ai'
+import { AiOutlineTwitter } from 'react-icons/ai'
+import { FaLinkedinIn } from 'react-icons/fa'
+import { FiExternalLink } from 'react-icons/fi'
+import { FaYoutube } from 'react-icons/fa'
 
 // Icons taken from: https://simpleicons.org/
 
 const components = {
-  mail: Mail,
-  github: Github,
-  facebook: Facebook,
-  youtube: Youtube,
-  linkedin: Linkedin,
-  twitter: Twitter,
+  mail: AiOutlineMail,
+  github: AiOutlineGithub,
+  facebook: AiOutlineFacebook,
+  linkedin: FaLinkedinIn,
+  twitter: AiOutlineTwitter,
+  external: FiExternalLink,
+  youtube: FaYoutube,
 }
 
 const SocialIcon = ({ kind, href, size = 8 }) => {
@@ -24,15 +26,13 @@ const SocialIcon = ({ kind, href, size = 8 }) => {
 
   return (
     <a
-      className="text-sm text-gray-500 transition hover:text-gray-600"
+      className="text-3xl transition duration-200 hover:text-primary-600"
       target="_blank"
       rel="noopener noreferrer"
       href={href}
     >
       <span className="sr-only">{kind}</span>
-      <SocialSvg
-        className={`fill-current text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400 h-${size} w-${size}`}
-      />
+      <SocialSvg />
     </a>
   )
 }
