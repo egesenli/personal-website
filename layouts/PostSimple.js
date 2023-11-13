@@ -6,9 +6,10 @@ import siteMetadata from '@/data/siteMetadata'
 import formatDate from '@/lib/utils/formatDate'
 import Comments from '@/components/comments'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import CountView from '@/components/CountView'
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
-  const { date, title } = frontMatter
+  const { date, title, slug } = frontMatter
 
   return (
     <SectionContainer>
@@ -29,6 +30,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               <div>
                 <PageTitle>{title}</PageTitle>
               </div>
+              <CountView className="ml-0" slug={slug} />
             </div>
           </header>
           <div
@@ -36,7 +38,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
-              <div className="prose max-w-none pt-10 pb-8 dark:prose-dark">{children}</div>
+              <div className="prose max-w-none pb-8 pt-10 dark:prose-dark">{children}</div>
             </div>
             <Comments frontMatter={frontMatter} />
             <footer>
