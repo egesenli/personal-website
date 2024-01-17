@@ -12,9 +12,9 @@ const Navbar = ({ onToggleNav }) => {
   const { theme, resolvedTheme } = useTheme()
 
   return (
-    <nav className="bg-white/30 dark:bg-black/30 sticky top-0 z-50 border-b border-gray-200 dark:border-gray-700 backdrop-blur">
-      <div className="flex items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
-        <div className="flex items-center ml-4 mt-2">
+    <nav className="sticky top-0 z-50 border-b border-gray-200 bg-white/30 backdrop-blur dark:border-gray-700 dark:bg-black/30">
+      <div className="mx-auto flex max-w-3xl items-center justify-between sm:px-4 lg:max-w-4xl lg:px-8 xl:max-w-6xl">
+        <div className="ml-4 mt-2 flex items-center">
           <Link href="/" aria-label={siteMetadata.headerTitle}>
             <div className="flex items-center">
               <div className="mr-3">
@@ -28,18 +28,18 @@ const Navbar = ({ onToggleNav }) => {
             </div>
           </Link>
         </div>
-        <div className="hidden md:flex items-center justify-center mt-2">
+        <div className="mt-2 hidden items-center justify-center md:flex">
           {headerNavLinks.map((link) => (
             <Link
               key={link.title}
               href={link.href}
-              className="p-1 font-medium text-black dark:text-gray-100 sm:p-4 hover:bg-gray-200 dark:hover:bg-gray-800 rounded-xl"
+              className="rounded-xl p-1 font-medium text-black hover:bg-gray-200 dark:text-gray-100 dark:hover:bg-gray-800 sm:p-4"
             >
               {link.title}
             </Link>
           ))}
         </div>
-        <div className="flex items-center space-x-4 mt-2 mr-4">
+        <div className="mr-4 mt-2 flex items-center space-x-4">
           <button
             type="button"
             className="ml-1 mr-1 h-8 w-8 rounded py-1 md:hidden"
@@ -59,7 +59,7 @@ const Navbar = ({ onToggleNav }) => {
               />
             </svg>
           </button>
-          <div className="flex items-center mt-2">
+          <div className="mt-2 flex items-center">
             <ThemeSwitch />
           </div>
         </div>
