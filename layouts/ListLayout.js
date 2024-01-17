@@ -1,9 +1,9 @@
-import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import { useState } from 'react'
 import Pagination from '@/components/Pagination'
 import formatDate from '@/lib/utils/formatDate'
 import DisplayViewCount from '@/components/DisplayViewCount' // Import DisplayViewCount component
+import Link from '@/components/Link'
 
 export default function ListLayout({ posts, title, initialDisplayPosts = [], pagination }) {
   const [searchValue, setSearchValue] = useState('')
@@ -52,41 +52,43 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
           {displayPosts.map((frontMatter) => {
             const { slug, date, title, summary, tags } = frontMatter
             return (
-              <li key={slug} className="py-6">
-                <article className="space-y-2 rounded-xl border-2 border-transparent bg-transparent bg-opacity-20 p-4 transition duration-500 hover:border-primary-500 hover:bg-gray-200 dark:border-transparent dark:hover:border-primary-500 dark:hover:bg-gray-800 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-3">
-                  <div className="space-y-5 xl:col-span-3">
-                    <div className="space-y-1">
-                      <div>
-                        <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                          <div className="xl:col-span-1">
-                            <dl>
-                              <dd className="text-sm font-normal leading-6 text-gray-500 dark:text-gray-400">
-                                <time dateTime={date}>{formatDate(date)}</time>
-                                {' • '}
-                                <DisplayViewCount className="mx-1" slug={slug} />
-                              </dd>
-                            </dl>
-                          </div>
-                          <Link
-                            href={`/blog/${slug}`}
-                            className="text-gray-900 transition duration-500 ease-in-out hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-500"
-                          >
-                            {title}
-                          </Link>
-                        </h2>
-                      </div>
-                      <div className="flex flex-wrap">
-                        {tags.map((tag) => (
-                          <Tag key={tag} text={tag} />
-                        ))}
-                      </div>
-                      <div className="prose max-w-none pt-5 text-gray-500 dark:text-gray-400">
-                        {summary}
+              <Link href={`/blog/${slug}`} key={slug}>
+                <li key={slug} className="py-6">
+                  <article className="space-y-2 rounded-xl border-2 border-transparent bg-transparent bg-opacity-20 p-4 transition duration-500 hover:border-primary-500 hover:bg-gray-200 dark:border-transparent dark:hover:border-primary-500 dark:hover:bg-gray-800 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-3">
+                    <div className="space-y-5 xl:col-span-3">
+                      <div className="space-y-1">
+                        <div>
+                          <h2 className="text-2xl font-bold leading-8 tracking-tight">
+                            <div className="xl:col-span-1">
+                              <dl>
+                                <dd className="text-sm font-normal leading-6 text-gray-500 dark:text-gray-400">
+                                  <time dateTime={date}>{formatDate(date)}</time>
+                                  {' • '}
+                                  <DisplayViewCount className="mx-1" slug={slug} />
+                                </dd>
+                              </dl>
+                            </div>
+                            <Link
+                              href={`/blog/${slug}`}
+                              className="text-gray-900 transition duration-500 ease-in-out hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-500"
+                            >
+                              {title}
+                            </Link>
+                          </h2>
+                        </div>
+                        <div className="flex flex-wrap">
+                          {tags.map((tag) => (
+                            <Tag key={tag} text={tag} />
+                          ))}
+                        </div>
+                        <div className="prose max-w-none pt-5 text-gray-500 dark:text-gray-400">
+                          {summary}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </article>
-              </li>
+                  </article>
+                </li>
+              </Link>
             )
           })}
         </ul>
