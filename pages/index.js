@@ -96,55 +96,56 @@ export default function Home({ posts }) {
           </div>
           {/* Use the SearchBar component here */}
         </div>
-        <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-          Latest
-        </h1>
-        <hr className="my-6" />
-        <ul>
-          {!posts.length && 'No posts found.'}
-          {displayPosts.map((frontMatter) => {
-            const { slug, date, title, summary, tags } = frontMatter
-            return (
-              <Link href={`/blog/${slug}`} key={slug}>
-                <li key={slug} className="py-6">
-                  <article className="space-y-2 rounded-xl border-2 border-transparent bg-transparent bg-opacity-20 p-4 transition duration-500 hover:border-primary-500 hover:bg-gray-200 dark:border-transparent dark:hover:border-primary-500 dark:hover:bg-gray-800 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-3">
-                    <div className="space-y-5 xl:col-span-3">
-                      <div className="space-y-1">
-                        <div>
-                          <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                            <div className="xl:col-span-1">
-                              <dl>
-                                <dd className="text-sm font-normal leading-6 text-gray-500 dark:text-gray-400">
-                                  <time dateTime={date}>{formatDate(date)}</time>
-                                  {' • '}
-                                  <DisplayViewCount className="mx-1" slug={slug} />
-                                </dd>
-                              </dl>
-                            </div>
-                            <Link
-                              href={`/blog/${slug}`}
-                              className="text-gray-900 transition duration-500 ease-in-out hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-500"
-                            >
-                              {title}
-                            </Link>
-                          </h2>
-                        </div>
-                        <div className="flex flex-wrap">
-                          {tags.map((tag) => (
-                            <Tag key={tag} text={tag} />
-                          ))}
-                        </div>
-                        <div className="prose max-w-none pt-5 text-gray-500 dark:text-gray-400">
-                          {summary}
+        <div className="divide-y divide-gray-400">
+          <h1 className="space-y-2 pb-8 pt-6 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:space-y-5 md:text-6xl md:leading-14">
+            Latest
+          </h1>
+          <ul>
+            {!posts.length && 'No posts found.'}
+            {displayPosts.map((frontMatter) => {
+              const { slug, date, title, summary, tags } = frontMatter
+              return (
+                <Link href={`/blog/${slug}`} key={slug}>
+                  <li key={slug} className="py-6">
+                    <article className="space-y-2 rounded-xl border-2 border-transparent bg-transparent bg-opacity-20 p-4 transition duration-500 hover:border-primary-500 hover:bg-gray-200 dark:border-transparent dark:hover:border-primary-500 dark:hover:bg-gray-800 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-3">
+                      <div className="space-y-5 xl:col-span-3">
+                        <div className="space-y-1">
+                          <div>
+                            <h2 className="text-2xl font-bold leading-8 tracking-tight">
+                              <div className="xl:col-span-1">
+                                <dl>
+                                  <dd className="text-sm font-normal leading-6 text-gray-500 dark:text-gray-400">
+                                    <time dateTime={date}>{formatDate(date)}</time>
+                                    {' • '}
+                                    <DisplayViewCount className="mx-1" slug={slug} />
+                                  </dd>
+                                </dl>
+                              </div>
+                              <Link
+                                href={`/blog/${slug}`}
+                                className="text-gray-900 transition duration-500 ease-in-out hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-500"
+                              >
+                                {title}
+                              </Link>
+                            </h2>
+                          </div>
+                          <div className="flex flex-wrap">
+                            {tags.map((tag) => (
+                              <Tag key={tag} text={tag} />
+                            ))}
+                          </div>
+                          <div className="prose max-w-none pt-5 text-gray-500 dark:text-gray-400">
+                            {summary}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </article>
-                </li>
-              </Link>
-            )
-          })}
-        </ul>
+                    </article>
+                  </li>
+                </Link>
+              )
+            })}
+          </ul>
+        </div>
       </div>
       <div className="flex pl-4 text-base font-medium leading-6">
         <Link
