@@ -8,6 +8,7 @@ import Iframe from 'react-iframe'
 export default function Music() {
   const [nowPlaying, setNowPlaying] = useState(null)
   const [topTracks, setTopTracks] = useState([])
+  const [showAllTracks, setShowAllTracks] = useState(false)
 
   useEffect(() => {
     const fetchNowPlaying = async () => {
@@ -20,9 +21,19 @@ export default function Music() {
       }
     }
 
-    const fetchTopTracks = async () => {
+    // const fetchTopTracks = async () => {
+    //   try {
+    //     const response = await fetch('/api/top-tracks')
+    //     const data = await response.json()
+    //     setTopTracks(data.tracks)
+    //   } catch (error) {
+    //     console.error('Error fetching Top Tracks: ', error)
+    //   }
+    // }
+
+    const fetchTopPlaylist = async () => {
       try {
-        const response = await fetch('/api/top-tracks')
+        const response = await fetch('/api/top-playlist')
         const data = await response.json()
         setTopTracks(data.tracks)
       } catch (error) {
@@ -31,7 +42,8 @@ export default function Music() {
     }
 
     fetchNowPlaying()
-    fetchTopTracks()
+    fetchTopPlaylist()
+    // fetchTopTracks()
 
     // Refresh Now Playing every 30 seconds
     const interval = setInterval(fetchNowPlaying, 30000)
@@ -40,22 +52,37 @@ export default function Music() {
     return () => clearInterval(interval)
   }, [])
 
+  const handleToggleTracks = () => {
+    setShowAllTracks(!showAllTracks)
+  }
+
+  // Add this SVG component at the beginning of your file or import it from a separate file
+  const ArrowIcon = ({ className }) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  )
+
+  const visibleTracks = showAllTracks ? topTracks : topTracks.slice(0, 5)
+
   return (
     <>
       <PageSEO title="Music" description={siteMetadata.description} />
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
+      <div className="divide-y divide-gray-700">
         <div className="space-y-2 pb-8 pt-6 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Music
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {siteMetadata.description} Lorem Ipsum is simply dummy text of the printing and
-            typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
-            the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-            specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-            with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            Welcome to the sonic realm curated by me, a dedicated artist on a mission to craft
+            unforgettable musical experiences, steering the journey through diverse genres and
+            creating a harmonious atmosphere that resonates with the soul. Stay tuned!
           </p>
         </div>
         <div className="container py-4">
@@ -106,30 +133,67 @@ export default function Music() {
         </div>
       </div>
 
-      {topTracks.length > 0 && (
+      {visibleTracks.length > 0 && (
         <div className="container py-4">
-          <div className="w-full">
-            <div className="rounded-lg bg-gray-500 p-8 shadow-lg dark:bg-gray-900">
-              <h2 className="mb-4 text-xl font-medium text-white">Top Tracks</h2>
-              <ul>
-                {topTracks.map((track, index) => (
-                  <li key={index} className="mb-2 text-white">
+          <div className="w-full max-w-5xl">
+            <div className="flex w-full flex-row items-baseline border-b border-gray-200 pb-8 pt-6 dark:border-gray-800">
+              <h1 className="text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14">
+                Top Tracks
+              </h1>
+            </div>
+            <ul>
+              {visibleTracks.map((track, index) => (
+                <div
+                  key={index}
+                  className="mt-3 flex w-full max-w-5xl flex-row items-baseline border-b border-gray-200 dark:border-gray-800"
+                >
+                  <p className="text-sm font-bold text-gray-500 dark:text-gray-600">{index + 1}</p>
+                  <div className="flex flex-col pl-3">
                     <a
-                      className="text-white hover:text-green-400"
+                      className="w-60 truncate font-medium hover:text-green-400 dark:text-white sm:w-96 md:w-full"
                       href={track.songUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      {track.title} by {track.artist}
+                      {track.title}
                     </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+                    <p className="mb-4 w-60 truncate text-gray-500 dark:text-gray-400 sm:w-96 md:w-full">
+                      {track.artist}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </ul>
+            {topTracks.length > 5 && (
+              <button
+                className="flex items-center font-medium text-primary-500 hover:text-primary-600 focus:outline-none dark:hover:text-primary-400"
+                onClick={handleToggleTracks}
+              >
+                {showAllTracks ? (
+                  <>
+                    Show Less
+                    <ArrowIcon className="h-4 w-4 rotate-180 transform" />
+                  </>
+                ) : (
+                  <>
+                    Show More
+                    <ArrowIcon className="h-4 w-4" />
+                  </>
+                )}
+              </button>
+            )}
           </div>
         </div>
       )}
-
+      <div className="space-y-2 pb-8 pt-6 md:space-y-5">
+        <h1 className="text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14">
+          Sets and Selections
+        </h1>
+        <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
+          Immerse yourself in the art of DJing with carefully curated sets and selections. Each mix
+          is a testament to the skillful blending of tracks in various genres.
+        </p>
+      </div>
       <div className="container py-4">
         <div className="w-full">
           <div>
@@ -145,6 +209,15 @@ export default function Music() {
             />
           </div>
         </div>
+      </div>
+      <div className="space-y-2 pb-8 pt-6 md:space-y-5">
+        <h1 className="text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14">
+          Join the Virtual Dance Floor
+        </h1>
+        <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
+          Catch up on live mixes, and connect with fellow music enthusiasts who share a passion for
+          rhythm and sound.
+        </p>
       </div>
 
       <div className="container py-4">
