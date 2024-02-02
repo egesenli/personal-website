@@ -17,6 +17,10 @@ public/sitemap.xml
 # production
 /build
 *.xml
+
+# Prisma
+/prisma/migrations
+
 # rss feed
 /public/feed.xml 
 
