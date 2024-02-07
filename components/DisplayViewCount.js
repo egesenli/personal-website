@@ -1,35 +1,33 @@
-// components/DisplayViewCount.js
 import { useEffect, useState } from 'react'
 
 const DisplayViewCount = ({ slug }) => {
   const [views, setViews] = useState(0)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const fetchViewCount = async () => {
       try {
-        console.log('Fetching view count for slug:', slug)
-
-        // Fetch call to get the view count without incrementing
         const response = await fetch(`/api/views/${slug}/count`, {
           method: 'GET',
         })
 
         if (response.ok) {
           const data = await response.json()
-          console.log('Received view count data:', data)
           setViews(data.views)
         } else {
-          console.error('Failed to fetch view count')
+          console.error('Failed to fetch view count. Status:', response.status)
         }
       } catch (error) {
         console.error('Error fetching view count:', error)
+      } finally {
+        setLoading(false)
       }
     }
 
     fetchViewCount()
   }, [slug])
 
-  return <span>{views} Views</span>
+  return <span>{loading ? 'Loading...' : `${views} Views`}</span>
 }
 
 export default DisplayViewCount

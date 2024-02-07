@@ -1,39 +1,33 @@
 import { useEffect, useState } from 'react'
 
 const CountView = ({ slug }) => {
-  console.log('CountView component rendering for slug:', slug)
-
   const [views, setViews] = useState(0)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    console.log('Effect is running for slug:', slug)
-
     const incrementView = async () => {
       try {
-        console.log('Fetching view count for slug:', slug)
-
-        // Assuming a fetch call to update the view count
         const response = await fetch(`/api/views/${slug}`, {
           method: 'PUT',
         })
 
         if (response.ok) {
           const data = await response.json()
-          console.log('Received view count data:', data)
           setViews(data.views)
         } else {
-          console.error('Failed to increment view count')
+          console.error('Failed to increment view count. Status:', response.status)
         }
       } catch (error) {
         console.error('Error incrementing view count:', error)
+      } finally {
+        setLoading(false)
       }
     }
 
     incrementView()
   }, [slug])
 
-  console.log('Rendering CountView component for slug:', slug)
-  return <span>{views} Views</span>
+  return <span>{loading ? 'Updating Views...' : `${views} Views`}</span>
 }
 
 export default CountView
