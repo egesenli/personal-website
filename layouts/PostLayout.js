@@ -8,17 +8,18 @@ import siteMetadata from '@/data/siteMetadata'
 import Comments from '@/components/comments'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import CountView from '@/components/CountView'
+import { BiEditAlt, BiSolidTimer, BiSolidShow, BiCalendarEvent } from 'react-icons/bi'
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
-const discussUrl = (slug) =>
-  `https://mobile.twitter.com/search?q=${encodeURIComponent(
+const discussUrl = (slug, tweetText) =>
+  `https://twitter.com/intent/tweet?url=${encodeURIComponent(
     `${siteMetadata.siteUrl}/blog/${slug}`
-  )}`
+  )}&text=${encodeURIComponent(tweetText)}`
 
 const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
-  const { slug, fileName, date, title, images, tags } = frontMatter
+  const { slug, fileName, date, title, images, tags, readingTime } = frontMatter
 
   return (
     <SectionContainer>
@@ -37,6 +38,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   <dt className="sr-only">Published on</dt>
                   <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                     <time dateTime={date}>
+                      <BiCalendarEvent className="-mt-1 ml-0 mr-1 inline" />
                       {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
                     </time>
                   </dd>
@@ -45,7 +47,14 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               <div>
                 <PageTitle>{title}</PageTitle>
               </div>
-              <CountView className="ml-0" slug={slug} />
+              <div className="flex items-center justify-center space-x-2">
+                <BiSolidShow className="ml-0" />
+                <CountView className="ml-0" slug={slug} />
+                <BiEditAlt className="ml-0" />
+                <span>{readingTime.words} words</span>
+                <BiSolidTimer className="ml-0" />
+                <span>{readingTime.text}</span>
+              </div>
             </div>
           </header>
           <div
@@ -89,12 +98,18 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
             </dl>
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
               <div className="prose max-w-none pb-8 pt-10 dark:prose-dark">{children}</div>
-              <div className="pb-6 pt-6 text-sm text-gray-700 dark:text-gray-300">
-                <Link href={discussUrl(slug)} rel="nofollow">
+              <div className="flex justify-center pb-6 pt-6 text-sm text-gray-700 dark:text-gray-300">
+                <Link
+                  className="mx-1.5"
+                  href={discussUrl(slug, 'Hey, check out this blog post!')}
+                  rel="nofollow"
+                >
                   {'Discuss on Twitter'}
                 </Link>
                 {` • `}
-                <Link href={editUrl(fileName)}>{'View on GitHub'}</Link>
+                <Link className="mx-1.5" href={editUrl(fileName)}>
+                  {'View on GitHub'}
+                </Link>
               </div>
               <Comments frontMatter={frontMatter} />
             </div>
