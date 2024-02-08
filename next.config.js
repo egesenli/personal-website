@@ -11,7 +11,7 @@ const ContentSecurityPolicy = `
   media-src 'none';
   connect-src *;
   font-src 'self';
-  frame-src giscus.app https://w.soundcloud.com/ https://player.twitch.tv/;
+  frame-src 'self' giscus.app https://w.soundcloud.com/ https://player.twitch.tv/;
 `
 
 const securityHeaders = [
