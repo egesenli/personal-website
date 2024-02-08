@@ -5,9 +5,9 @@ const siteMetadata = {
   description: 'A place where I can express myself',
   language: 'en-us',
   theme: 'system', // System, dark or light
-  siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
+  siteUrl: 'https://egesenli.com',
   siteRepo: 'https://github.com/egesenli/personal-website',
-  siteLogo: '/static/images/logo.png',
+  siteLogo: '/static/images/logo-white.png',
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.png',
   email: 'egesenli@gmail.com',
