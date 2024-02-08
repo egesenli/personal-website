@@ -3,8 +3,8 @@ import { useRouter } from 'next/router'
 import siteMetadata from '@/data/siteMetadata'
 
 const ogImageDimensions = {
-  width: 75,
-  height: 75,
+  width: 150,
+  height: 150,
 }
 
 const CommonSEO = ({ title, description, ogType, ogImage, twImage, canonicalUrl }) => {
