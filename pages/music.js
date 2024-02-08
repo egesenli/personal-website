@@ -224,7 +224,7 @@ export default function Music() {
         <div className="w-full">
           <div>
             <Iframe
-              url="https://player.twitch.tv/?channel=senliofficial&parent=localhost"
+              url="https://player.twitch.tv/?channel=senliofficial&parent=egesenli.com"
               id="twitchEmbed"
               className="h-96 w-full"
               display="initial"
