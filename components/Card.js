@@ -2,7 +2,7 @@ import SocialIcon from './social-icons'
 import FolderIcon from './icon'
 
 const Card = ({ title, description, imgSrc, href, github, tech1, tech2, tech3 }) => (
-  <div className="md md:w-1/2 p-4" style={{ maxWidth: '544px' }}>
+  <div className="md p-4 md:w-1/2" style={{ maxWidth: '544px' }}>
     <div className="h-full transform overflow-hidden rounded-md border-2 border-solid border-black bg-transparent transition duration-500 hover:rounded-md hover:border-primary-500 hover:bg-gray-200 dark:border-white dark:hover:border-primary-500 dark:hover:bg-gray-800">
       <div className="p-6">
         <div className="flex flex-row items-center justify-between">

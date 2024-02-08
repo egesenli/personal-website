@@ -13,13 +13,13 @@ const MobileNav = ({ navShow, onToggleNav }) => {
 
   return (
     <div
-      className={`fixed top-0 left-0 z-50 h-full w-full transform backdrop-filter backdrop-blur-lg duration-300 ease-in-out ${
+      className={`fixed left-0 top-0 z-50 h-full w-full transform backdrop-blur-lg backdrop-filter duration-300 ease-in-out ${
         navShow ? 'translate-x-0' : 'translate-x-full'
       }`}
     >
       <button
         type="button"
-        className="absolute top-6 right-6 h-8 w-8 rounded"
+        className="absolute right-6 top-6 h-8 w-8 rounded"
         aria-label="Close Menu"
         onClick={onToggleNav}
       >
@@ -41,7 +41,7 @@ const MobileNav = ({ navShow, onToggleNav }) => {
           <div key={link.title} className="px-12 py-4">
             <Link
               href={link.href}
-              className="p-3 text-xl font-medium text-black dark:text-gray-100 sm:p-4 hover:bg-gray-200 dark:hover:bg-gray-800 rounded-xl"
+              className="rounded-xl p-3 text-xl font-medium text-black hover:bg-gray-200 dark:text-gray-100 dark:hover:bg-gray-800 sm:p-4"
               onClick={onToggleNav}
             >
               {link.title}
