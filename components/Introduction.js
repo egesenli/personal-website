@@ -10,7 +10,7 @@ const Introduction = () => {
           <h1 className="text-foreground text-4xl font-bold sm:text-6xl">
             Hi, I'm Erkan Ege Senli
           </h1>
-          <h2 className="text-sm font-bold text-gray-500 md:text-base">
+          <h2 className="text-sm text-gray-500 md:text-base">
             Full-Stack Software Development | Business & Data Analysis
           </h2>
           <p className="sm:text-lg">
