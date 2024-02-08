@@ -1,7 +1,7 @@
 ---
 name: Erkan Ege Senli
 avatar: /static/images/new-pp.png
-occupation: Business & Data Analysis | Full-Stack Software Development
+occupation: Full-Stack Software Development | Business & Data Analysis
 company: [Your Current Company]
 email: egesenli@gmail.com
 linkedin: https://www.linkedin.com/in/erkanesenli/
