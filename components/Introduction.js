@@ -21,9 +21,9 @@ const Introduction = () => {
           </p>
           <div className="flex space-x-3 pt-6">
             <SocialIcon kind="mail" href={`mailto:egesenli@gmail.com`} />
-            <SocialIcon kind="github" href={'https://github.com/erkanesenli'} />
-            <SocialIcon kind="linkedin" href={'https://www.linkedin.com/in/erkanesenli/'} />
-            <SocialIcon kind="twitter" href={'https://twitter.com/erkanesenli'} />
+            <SocialIcon kind="github" href={'https://github.com/egesenli'} />
+            <SocialIcon kind="linkedin" href={'https://www.linkedin.com/in/erkanegesenli/'} />
+            <SocialIcon kind="twitter" href={'https://twitter.com/egesenli'} />
           </div>
         </div>
       </div>

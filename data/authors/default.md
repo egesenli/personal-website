@@ -4,8 +4,8 @@ avatar: /static/images/new-pp.png
 occupation: Full-Stack Software Development | Business & Data Analysis
 company: [Your Current Company]
 email: egesenli@gmail.com
-linkedin: https://www.linkedin.com/in/erkanesenli/
-github: https://github.com/erkanesenli
+linkedin: https://www.linkedin.com/in/erkanegesenli/
+github: https://github.com/egesenli
 ---
 
 As a self-motivated, determined, and meticulous employee with a background in industrial engineering, I've been a results-focused professional in driving business process improvements within both large and medium-sized corporations. I'm excited to bring my unique perspective to any team in a transferable skillset from on-field and off-field approaches to process improvements with a strong focus on data-based decisions, software development and technical tools.
