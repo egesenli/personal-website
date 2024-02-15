@@ -15,7 +15,7 @@ const siteMetadata = {
   twitter: 'https://twitter.com/egesenli',
   facebook: 'https://facebook.com/ege.senli',
   youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com/erkanegesenli',
+  linkedin: 'https://www.linkedin.com/in/erkanegesenli/',
   locale: 'en-US',
   analytics: {
     plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app
