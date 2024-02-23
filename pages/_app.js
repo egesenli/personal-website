@@ -16,6 +16,9 @@ const isDevelopment = process.env.NODE_ENV === 'development'
 const isSocket = process.env.SOCKET
 
 export default function App({ Component, pageProps }) {
+  // Check if the current page should exclude the layout
+  const excludeLayout = Component.noLayout
+
   return (
     <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
       <Head>
@@ -23,9 +26,13 @@ export default function App({ Component, pageProps }) {
       </Head>
       {isDevelopment && isSocket && <ClientReload />}
       <Analytics />
-      <LayoutWrapper>
-        <Component {...pageProps} />
-      </LayoutWrapper>
+      {/* Conditionally render the LayoutWrapper based on the exclusion flag */}
+      {!excludeLayout && (
+        <LayoutWrapper>
+          <Component {...pageProps} />
+        </LayoutWrapper>
+      )}
+      {excludeLayout && <Component {...pageProps} />}
     </ThemeProvider>
   )
 }
