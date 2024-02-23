@@ -14,10 +14,12 @@ const Introduction = () => {
             Full-Stack Software Development | Business & Data Analysis
           </h2>
           <p className="sm:text-lg">
-            I have an industrial engineering background and a keen interest in web development. I'm
-            eager to continue learning and stay current with the latest web technologies. I'm
-            currently learning web development skills such as Next.js, React.js, Node.js, Prisma,
-            SQL, and database management.
+            I have an industrial engineering background and keen interest in software development &
+            data analysis. I'm eager to continue learning and stay current with the latest web
+            technologies. I'm currently expanding my skills in web development, diving into
+            technologies like Next.js, React.js, Node.js, Prisma, SQL, and database management.
+            Additionally, I am delving into data analysis technologies such as Python, Tableau and
+            Power BI to enhance my proficiency and broaden my capabilities.
           </p>
           <div className="flex space-x-3 pt-6">
             <SocialIcon kind="mail" href={`mailto:egesenli@gmail.com`} />

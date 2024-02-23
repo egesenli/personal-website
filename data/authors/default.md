@@ -8,23 +8,22 @@ linkedin: https://www.linkedin.com/in/erkanegesenli/
 github: https://github.com/egesenli
 ---
 
-As a self-motivated, determined, and meticulous employee with a background in industrial engineering, I've been a results-focused professional in driving business process improvements within both large and medium-sized corporations. I'm excited to bring my unique perspective to any team in a transferable skillset from on-field and off-field approaches to process improvements with a strong focus on data-based decisions, software development and technical tools.
+A self-motivated, determined, and meticulous professional with a background in industrial engineering and a passion for data analysis. Recently completed a 30-week full-stack software development boot camp, enhancing technical skills for today's web landscape. Proficient in various frameworks, languages, SQL & Relational Databases, Networking, and HTTP. Excited to apply technical expertise in data and business analysis, focusing on SQL, macros, and data analytics. Skilled in tools like Tableau and Power BI with a commitment to sustainability and efficiency. Continuously staying updated on the latest data analysis technologies, bringing an innovative mindset to any team. Multi-disciplinary background adds significant value to data and business analysis projects. Eager to launch a career in this field and acquire new skills for effective contributions.
 
 ---
 
 ## Skills
 
-- **Languages:** HTML, CSS3, Sass, JavaScript, ECMAScript 6 (ES6), XML, VBA, JSX, EJS, Ruby, C#, Python
+- **Languages:** HTML, CSS3, Sass, JavaScript, ECMAScript 6 (ES6), XML, VBA, JSX, EJS, Ruby, C#, SQL, Python
 - **Databases and ORM’s:** PostgreSQL, MS-SQL, MySQL, MongoDB, Prisma
 - **Frameworks, Libraries, and Environments:** Next.js, React, Ruby on Rails, jQuery, Express, Node.js, npm, Bootstrap, Tailwind, Storybook, Git, WordPress, NumPy, SciPy, Pandas, Hadoop
-- **Software:** MS Office Suites, Office 365, IBM ILOG CPLEX, Salesforce, SAP, Arena Simulation Software, AutoCAD, Tableau
+- **Software:** MS Office Suites, Office 365, Power BI, Tableau, IBM ILOG CPLEX, Salesforce CRM, SAP ERP, Arena Simulation Software, AutoCAD
 - **Testing:** Cypress, Jest, Mocha & Chai
 
 ---
 
 ## Education
 
-- **Data Analytics Certificate**, Cantek IT Skills Development, July 2023
 - **Full-Stack Web Development Diploma**, Lighthouse Labs, May 2023
 - **Business Administration Diploma (Co-Op)**, ILAC Toronto, January 2022
 - **Bachelor of Science (Industrial Engineering)**, Yasar University (50% Scholarship), January 2019
@@ -39,49 +38,65 @@ As a self-motivated, determined, and meticulous employee with a background in in
 
 ## Professional Experience
 
-**Expeditors, Mississauga, Ontario | Inventory Associate** (2022)
+### Expeditors
 
-- Collaborated with the Expeditors Canada Inventory Team to implement process improvements and cost-saving measures in warehouse operations, resulting in a significant increase in efficiency of inventory levels.
-- Successfully managed and maintained accurate inventory levels for a wide range of products, resulting in a reduction of stockouts by 25%.
-- Monitored inventory levels and implemented strategies to optimize stock levels, resulting in a reduction of excess inventory by 15%.
-- Conducted regular inventory audits and cycle counts and PI’s, identifying and resolving discrepancies and errors in a timely manner.
-- Collaborated with purchasing and logistics teams to ensure timely and cost-effective deliveries and replenishments.
+**Inventory Planning Specialist** (Feb 2022 - Apr 2022 | 3 mos)
+_Mississauga, Ontario, Canada | On-site_
 
-Key Achievements: Implemented and maintained efficient inventory tracking systems and procedures, resulting in a 15% increase in efficiency.
+- Successfully managed and maintained accurate inventory levels, reducing stockouts by 25%.
+- Implemented strategies to optimize stock levels, resulting in a 15% reduction in excess inventory.
+- Conducted regular inventory audits and cycle counts, resolving discrepancies in a timely manner.
+- Collaborated with purchasing and logistics teams for timely and cost-effective deliveries.
 
-**Saygili Bearings, Turkey, Europe | Sales Engineer** (2019 - 2020)
+**Skills:** Inventory Planning, Warehouse Management Systems, Cycle Counting, Data Analysis, Tableau, Microsoft Excel Macros, Physical Inventory, Inventory Management
 
-- Collaborated with Saygilii Bearings leadership team, a large manufacturer of industrial bearings based in Turkey, with distributors across the globe, to enable product improvements, cost effectiveness in manufacturing and sales processes.
-- Built and consolidated cost estimates and bid documents while analyzing customer RFPs; presented recommendations to the leadership team for informed decisions.
-- Supervised systems engineering and customer support programs; improved program efficiency by 26% over a period of 3 months while fostering customer relationships and feedback.
-- Coordinated customer feedback and market forecasts, recommended and presented key findings to product development teams; improved median NPS (Net Promoter Score) by more than 10 folds.
-- Contributed to long-range planning with industry leaders, business development, and solution development teams.
+### Saygılı Rulman
 
-Key Achievements: Instrumental to the company’s growth (20% YoY) supporting long-term strategic objectives. Identified new business opportunities and contributed to the company’s customer retention goal of 95%.
+**Sales Engineer** (Mar 2019 - Sep 2020 | 1 yr 7 mos)
 
-**MET Advanced Technology Systems, Turkey, Europe | Systems Engineer (Intern)** (2018-2019)
+- Prepared cost estimates and bid documents by studying customer RFPs and consulting with project managers.
+- Managed systems engineering and customer support programs.
+- Recommended changes and improvements in products based on customer feedback.
+- Analyzed market trends, competitor performance, and product strengths.
 
-- Conceptualized a structured approach to software design, integrations, and experimentation to contribute to SDLC using mathematical models, workflow management, and team management.
-- Demonstrated a structured approach to software design; performed mathematical computations, interpretations of mechanical designs; refined integrations of automated systems.
-- Sustained smooth management of software workflows; implemented data integration and software maintenance protocols with team members; conducted software workshops with internal and external stakeholders.
-- Fostered a strong relationship with team members and leadership alignment on the design of experiments, quality improvement recommendations.
+**Skills:** SQL, Data Analysis, Data Visualization, Enterprise Resource Planning (ERP), Canias ERP, Customer Relationship Management (CRM)
 
-Key Achievements: Resolved key software/hardware issues; devised improvements based on computational-based methodologies, maintained business continuity, and minimized operational disruptions.
+### MET Advanced Technology Systems
 
-**Inspo Events and Organization, Turkey, Europe | Program Supervisor** (2017-2018)
+**Engineering Intern** (Jul 2018 - Mar 2019 | 9 mos)
 
-- Directed and facilitated online and offline events coordinating marketing, advertising, and sales and operational activities.
-- Unified strong relationships with team members, leadership, and cross-functional business units to deliver on successful and effective organization of corporate and community events.
-- Cultivated team cohesiveness, identified resource gaps, and mobilized an effective team for the company’s commitment to business operations and revenue growth.
-- Developed workstream procedures and mentored staff to minimize disruption of services and maintain business continuity; Provided leadership, training, and problem resolution to team members.
-- Facilitated and collaborated with business leadership on continuous improvement initiatives; Scope included resource management and operational procedures.
-- Participated, in coordination with Human Resources, in the selection process of new hires and support on-boarding, continuous training, development, and mentoring of all team members.
+- Assisted with engineering calculations, cost estimates, and field visits.
+- Read and interpreted parts lists and mechanical drawings.
+- Implemented data to Redmine (Open-Source Project Management System).
+- Created HTML Pages for E-Mail Marketing and analyzed them via Mailchimp.
 
-Key Achievements: Diversified Inspo’s client portfolio and generated 40% of all leads for corporate and community events to drive revenue and business growth.
+**Skills:** Redmine, Cascading Style Sheets (CSS), HTML, Project Management, MailChimp
 
----
+### Delphi
 
-## Additional Experience and Internships
+**Senior Project Engineer (Co-op)** (Nov 2017 - Jun 2018 | 8 mos)
 
-- **Purchase Engineer (Intern)** at Delphi Automotive Systems (2017)
-- **Quality Control Engineer** at Havatek Engineering (2016)
+- Graduation Project: Optimization of Employee Transportation Service Routes, DELPHI(APTIV) Automotive Systems.
+
+**Skills:** Mathematical Modeling, Microsoft Excel, Microsoft Project, VBA, Decision Support System
+
+**Purchasing Intern (Internship)** (Jun 2017 - Aug 2017 | 3 mos)
+
+- Worked with OEM's to understand needs and provide excellent service.
+- Collaborated with Production Department for improvement in the manufacturing process.
+- Participated in 6-Sigma Projects for logistic operations.
+- Acquired proficiency in SAP transactions and established a SAP-Excel VBA connection.
+- Experienced in foundations of Lean Manufacturing.
+
+**Skills:** Project Management, SAP, Six Sigma, Microsoft Project, Microsoft Excel Macros, VBA, Microsoft Power BI
+
+### Havatek
+
+**Quality Control Engineering Intern (Internship)** (Jul 2016 - Aug 2016 | 2 mos)
+
+- Gained experience about welded manufacturing.
+- Learned ISO & ASME Standards for Welding.
+- Analyzed metrics with Statistical Process Control and other Quality Control Techniques.
+- Helped to prepare Quality Control Reports.
+
+**Skills:** Statistical Process Control (SPC), Statistical Data Analysis
