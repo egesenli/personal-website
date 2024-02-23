@@ -18,7 +18,7 @@ const Introduction = () => {
             data analysis. I'm eager to continue learning and stay current with the latest web
             technologies. I'm currently expanding my skills in web development, diving into
             technologies like Next.js, React.js, Node.js, Prisma, SQL, and database management.
-            Additionally, I am delving into data analysis technologies such as Python, Tableau and
+            Additionally, I'm delving into data analysis technologies such as Python, Tableau and
             Power BI to enhance my proficiency and broaden my capabilities.
           </p>
           <div className="flex space-x-3 pt-6">
