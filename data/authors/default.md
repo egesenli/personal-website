@@ -38,7 +38,7 @@ A self-motivated, determined, and meticulous professional with a background in i
 
 ## Professional Experience
 
-### Expeditors
+### [Expeditors](https://www.expeditors.com/)
 
 **Inventory Planning Specialist** (Feb 2022 - Apr 2022 | 3 mos)
 _Mississauga, Ontario, Canada | On-site_
@@ -50,7 +50,7 @@ _Mississauga, Ontario, Canada | On-site_
 
 **Skills:** Inventory Planning, Warehouse Management Systems, Cycle Counting, Data Analysis, Tableau, Microsoft Excel Macros, Physical Inventory, Inventory Management
 
-### Saygılı Rulman
+### [Saygılı Rulman](https://saygilirulman.com.tr/en/)
 
 **Sales Engineer** (Mar 2019 - Sep 2020 | 1 yr 7 mos)
 
@@ -61,7 +61,7 @@ _Mississauga, Ontario, Canada | On-site_
 
 **Skills:** SQL, Data Analysis, Data Visualization, Enterprise Resource Planning (ERP), Canias ERP, Customer Relationship Management (CRM)
 
-### MET Advanced Technology Systems
+### [MET Advanced Technology Systems](https://metltd.net/en)
 
 **Engineering Intern** (Jul 2018 - Mar 2019 | 9 mos)
 
@@ -72,7 +72,7 @@ _Mississauga, Ontario, Canada | On-site_
 
 **Skills:** Redmine, Cascading Style Sheets (CSS), HTML, Project Management, MailChimp
 
-### Delphi
+### [Delphi](https://www.delphiautoparts.com/)
 
 **Senior Project Engineer (Co-op)** (Nov 2017 - Jun 2018 | 8 mos)
 
@@ -90,7 +90,7 @@ _Mississauga, Ontario, Canada | On-site_
 
 **Skills:** Project Management, SAP, Six Sigma, Microsoft Project, Microsoft Excel Macros, VBA, Microsoft Power BI
 
-### Havatek
+### [Havatek](http://makina.havatek.com.tr/en-US)
 
 **Quality Control Engineering Intern (Internship)** (Jul 2016 - Aug 2016 | 2 mos)
 
